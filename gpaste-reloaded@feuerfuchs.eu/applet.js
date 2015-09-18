@@ -123,7 +123,7 @@ GPasteApplet.prototype = {
 
             this.menu.connect('open-state-changed', Lang.bind(this, function(menu, open) {
                 if (open) {
-                    if (this.displaySearchBar) {
+                    if ((this.compareVersion("3.14.1") != -1) && (this.displaySearchBar)) {
                         global.stage.set_key_focus(this.mitemSearch.entry);
                     }
                 } else {
