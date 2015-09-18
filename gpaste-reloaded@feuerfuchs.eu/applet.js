@@ -199,7 +199,9 @@ GPasteApplet.prototype = {
      */
     populateMenu: function() {
         this.menu.addMenuItem(this.mitemTrack);
-        this.menu.addMenuItem(this.mitemSearch);
+        if (this.compareVersion("3.14.1") != -1) {
+            this.menu.addMenuItem(this.mitemSearch);
+        }
 
         this.menu.addMenuItem(this.msepTop);
 
